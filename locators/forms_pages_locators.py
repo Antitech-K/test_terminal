@@ -1,4 +1,6 @@
 import pyautogui
+import time
+
 
 class FormsPagesLocators:
 
@@ -12,8 +14,10 @@ class FormsPagesLocators:
     def START_AUTHORIZATION(num_user):
         START_AUTHORIZATION = pyautogui.leftClick(1030, 185, duration=1)
         pyautogui.leftClick(1030, 210, duration=0.25)
+        time.sleep(0.25)
         pyautogui.write('000'+ str(num_user))
         pyautogui.leftClick(1030, 690, duration=0.25)
+        time.sleep(0.25)
         pyautogui.leftClick(1030, 690, duration=0.25)
         pyautogui.leftClick(1030, 185, duration=0.25)
 

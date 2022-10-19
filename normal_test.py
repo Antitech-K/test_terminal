@@ -3,12 +3,13 @@ import os
 from locators.forms_pages_locators import FormsPagesLocators
 
 
+time.sleep(2)
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c8 128")
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c4 128")
 
-FormsPagesLocators.START_AUTHORIZATION()
-os.system("/opt/RODOS4/RODOS4 --id 4798 --c8 128")
-FormsPagesLocators.NEXT_PAGE(0)
+FormsPagesLocators.START_AUTHORIZATION(0)
+time.sleep(0.25)
+FormsPagesLocators.NEXT_PAGE()
 time.sleep(55)
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c10 0")
 
