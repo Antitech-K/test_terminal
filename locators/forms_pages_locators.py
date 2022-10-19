@@ -2,8 +2,24 @@ import pyautogui
 
 class FormsPagesLocators:
 
-    def START_AUTHORIZATION():
+    def AUTHORIZATION():
         START_AUTHORIZATION = pyautogui.leftClick(1030, 185, duration=1)
+
+    def PRINT_STICKER():
+        pyautogui.leftClick(1030, 305, duration=0.25)
+        pyautogui.leftClick(1030, 185, duration=0.25)
+        pass
+    def START_AUTHORIZATION(num_user):
+        START_AUTHORIZATION = pyautogui.leftClick(1030, 185, duration=1)
+        pyautogui.leftClick(1030, 210, duration=0.25)
+        pyautogui.write('000'+ str(num_user))
+        pyautogui.leftClick(1030, 690, duration=0.25)
+        pyautogui.leftClick(1030, 690, duration=0.25)
+        pyautogui.leftClick(1030, 185, duration=0.25)
+
+        pass
+    def NEXT_PAGE():
+        pyautogui.leftClick(1030, 690, duration=0.25)
         pass
     def ACQUAINTANCE_PAC():
         ACQUAINTANCE_PAC = pyautogui.leftClick(1030, 430, duration=1)
@@ -11,13 +27,5 @@ class FormsPagesLocators:
     def HELPING():
         HELPING = pyautogui.leftClick(1225, 45)
         pass
-    def NUMBER_0():
-        NUMBER_0 = pyautogui.leftClick(1055, 585)
-        pass
-    def NUMBER_1():
-        NUMBER_1 = pyautogui.leftClick(890, 305)
-        pass
-    def NUMBER_2():
-        NUMBER_2 = pyautogui.leftClick(1050, 305)
-        pass
     
+
