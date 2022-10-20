@@ -2,7 +2,7 @@ import os
 from time import time
 import pyautogui
 
-class tonometr:
+class Tonometr:
     def RUN_LD():
         temp = 0
         while pyautogui.locateCenterOnScreen('preview.png', confidence=0.98) == None:

@@ -2,7 +2,7 @@ import os
 from time import time
 import pyautogui
 
-class termometr:
+class Termometr:
     def RUN_BERRCOM():
         temp = 0
         while pyautogui.locateCenterOnScreen('berrcom.png', confidence=0.90) == None:
