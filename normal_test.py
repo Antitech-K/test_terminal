@@ -9,8 +9,8 @@ from scenarios.scenariо_berrcom import Termometr
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c8 128")
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c4 128")
 
-time.sleep(5)
-FormsPagesLocators.START_AUTHORIZATION(0)
+time.sleep(3)
+FormsPagesLocators.START_AUTHORIZATION(1)
 FormsPagesLocators.PREVIEW_PAGE()
 Tonometr.RUN_LD()
 time.sleep(20)
