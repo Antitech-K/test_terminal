@@ -35,3 +35,5 @@ def shutdown_rodos():
         a = "/opt/RODOS4/RODOS4 --id 4798 --c" +str(x) + " 0"
         os.system(a)
     return "Усё"   
+
+shutdown_rodos()   
