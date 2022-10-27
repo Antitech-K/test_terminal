@@ -39,6 +39,17 @@ class FormsPagesLocators:
         pyautogui.leftClick(x, y, duration=0.25)
         pass
 
+    def PREVIEW_PAGE():
+        temp = 0
+        path_preview =  os.path.join('scenarios', 'preview.png')
+        while pyautogui.locateCenterOnScreen(path_preview, confidence=0.98) == None:
+            time.sleep(0.5)
+            temp += 1
+            if temp == 6:
+                return print("Хюстон, у нас проблемы на экране preview")
+        pyautogui.leftClick(1030, 690, duration=0.25)
+        pass
+
     def NEXT_PAGE():
         pyautogui.leftClick(1030, 690, duration=0.25)
         pass

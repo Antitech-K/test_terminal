@@ -11,6 +11,7 @@ os.system("/opt/RODOS4/RODOS4 --id 4798 --c4 128")
 
 time.sleep(5)
 FormsPagesLocators.START_AUTHORIZATION(0)
+FormsPagesLocators.PREVIEW_PAGE()
 Tonometr.RUN_LD()
 time.sleep(20)
 Termometr.RUN_BERRCOM()
