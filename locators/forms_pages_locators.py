@@ -29,7 +29,7 @@ class FormsPagesLocators:
                 return print("Хюстон, у нас проблемы на экране подтверждения")
         pyautogui.leftClick(1030, 690, duration=0.25)
 
-        path_inspection_type =  os.path.join('locators', 'inspection_type.png')
+        path_inspection_type =  os.path.join('locators', 'pre-trip_type.png')
         while pyautogui.locateCenterOnScreen(path_inspection_type) == None:
             time.sleep(1)
             temp += 1
