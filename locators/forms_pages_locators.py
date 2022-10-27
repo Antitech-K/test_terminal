@@ -1,16 +1,19 @@
 import pyautogui
 import time
+import os
 
 
 class FormsPagesLocators:
 
     def AUTHORIZATION():
         START_AUTHORIZATION = pyautogui.leftClick(1030, 185, duration=1)
+        pass
 
     def PRINT_STICKER():
         pyautogui.leftClick(1030, 305, duration=0.25)
         pyautogui.leftClick(1030, 185, duration=0.25)
         pass
+
     def START_AUTHORIZATION(num_user):
         START_AUTHORIZATION = pyautogui.leftClick(1030, 185, duration=1)
         pyautogui.leftClick(1030, 210, duration=0.25)
@@ -18,28 +21,32 @@ class FormsPagesLocators:
         pyautogui.write('000'+ str(num_user))
         pyautogui.leftClick(1030, 690, duration=0.25)
         temp = 0
-        while pyautogui.locateCenterOnScreen('verification.png', confidence=0.95) == None:
+        path_verification = os.path.join('locators', 'verification.png')
+        while pyautogui.locateCenterOnScreen(path_verification, confidence=0.95) == None:
             time.sleep(1)
             temp += 1
             if temp == 3:
                 return print("Хюстон, у нас проблемы на экране подтверждения")
         pyautogui.leftClick(1030, 690, duration=0.25)
 
-        while pyautogui.locateCenterOnScreen('inspection_type.png') == None:
+        path_inspection_type =  os.path.join('locators', 'inspection_type.png')
+        while pyautogui.locateCenterOnScreen(path_inspection_type) == None:
             time.sleep(1)
             temp += 1
             if temp == 3:
                 return print("Хюстон, у нас проблемы на экране типа осмотра")
-        x, y =pyautogui.locateCenterOnScreen('inspection_type.png')
+        x, y =pyautogui.locateCenterOnScreen(path_inspection_type)
         pyautogui.leftClick(x, y, duration=0.25)
         pass
 
     def NEXT_PAGE():
         pyautogui.leftClick(1030, 690, duration=0.25)
         pass
+
     def ACQUAINTANCE_PAC():
         ACQUAINTANCE_PAC = pyautogui.leftClick(1030, 430, duration=1)
         pass
+
     def HELPING():
         HELPING = pyautogui.leftClick(1225, 45)
         pass
