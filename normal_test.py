@@ -3,7 +3,7 @@ import os
 from locators.forms_pages_locators import FormsPagesLocators
 from scenarios.scenariо_LD import Tonometr
 from scenarios.scenariо_berrcom import Termometr
-from pages.start_page import LoadStartPage
+#from pages.start_page import LoadStartPage
 
 
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c8 128") # включение чайника

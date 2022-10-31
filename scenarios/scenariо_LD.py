@@ -3,7 +3,7 @@ import time
 import pyautogui
 
 class Tonometr:
-    def RUN_LD():
+    def runLD():
         os.system("/opt/RODOS4/RODOS4 --id 4798 --c10 128")
         pyautogui.leftClick(1030, 690, duration=0.25)
         temp = 0

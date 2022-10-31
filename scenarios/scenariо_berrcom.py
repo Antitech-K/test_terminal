@@ -3,7 +3,7 @@ import time
 import pyautogui
 
 class Termometr:
-    def RUN_BERRCOM():
+    def runBERRCOM():
         temp = 0
         path_termometr =  os.path.join('scenarios', 'berrcom.png')
         while pyautogui.locateCenterOnScreen(path_termometr, confidence=0.90) == None:
