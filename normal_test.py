@@ -16,6 +16,8 @@ Tonometr.runLD()
 time.sleep(20)
 Termometr.runBERRCOM()
 
+
+
 #алкотестирование
 time.sleep(10)
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c0 128")
