@@ -20,6 +20,7 @@ class FormsPagesLocators:
         pyautogui.leftClick(x, y, duration=0.25)
         time.sleep(0.25)
         
+        pyautogui.leftClick(1030, 200, duration=0.25)
         pyautogui.write('000'+ str(num_user))
         pyautogui.leftClick(1030, 690, duration=0.25)
         temp = 0
