@@ -44,7 +44,7 @@ class FormsPagesLocators:
 
     def PREVIEW_PAGE():
         temp = 0
-        path_preview =  os.path.join('scenarios', 'preview.png')
+        path_preview =  os.path.join('pages', 'preview.png')
         while pyautogui.locateCenterOnScreen(path_preview, confidence=0.98) == None:
             time.sleep(0.5)
             temp += 1
