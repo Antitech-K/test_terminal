@@ -30,9 +30,11 @@ class FormsPagesLocators:
             temp += 1
             if temp == 3:
                 return print("Хюстон, у нас проблемы на экране подтверждения")
+                exit()
         pyautogui.leftClick(1030, 690, duration=0.25)
 
         path_inspection_type =  os.path.join('locators', 'pre-trip_type.png')
+        
         while pyautogui.locateCenterOnScreen(path_inspection_type) == None:
             time.sleep(1)
             temp += 1
@@ -50,6 +52,7 @@ class FormsPagesLocators:
             temp += 1
             if temp == 6:
                 return print("Хюстон, у нас проблемы на экране preview")
+                exit()
         pyautogui.leftClick(1030, 690, duration=0.25)
         pass
 
