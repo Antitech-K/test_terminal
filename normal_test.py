@@ -17,11 +17,11 @@ def shutdown_rodos():
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c8 128") # включение чайника
 os.system("/opt/RODOS4/RODOS4 --id 4798 --c4 128") # включение компрессор
 
-time.sleep(4)
+time.sleep(3)
 FormsPagesLocators.Authorization(1) 
 FormsPagesLocators.PREVIEW_PAGE() #подтверждение страницы превью
 Tonometr.runLD()
-time.sleep(20)
+time.sleep(30)
 Termometr.runBERRCOM()
 
 
