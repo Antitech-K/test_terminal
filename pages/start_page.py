@@ -9,7 +9,7 @@ class LoadStartPage:
     counter = 0
     
     path_start =  os.path.join('pages', 'start_load.png')
-    pyautogui.press('f11') #полноэкранный режим
+    #pyautogui.press('f11') #полноэкранный режим
     time.sleep(1)
     if pyautogui.locateCenterOnScreen(path_start, confidence=0.9) ==None:
         counter += 1

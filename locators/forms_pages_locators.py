@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import os
+import os, sys
 
 
 class FormsPagesLocators:
@@ -19,6 +19,17 @@ class FormsPagesLocators:
         x, y =pyautogui.locateCenterOnScreen(path_AutorizationButton)
         pyautogui.leftClick(x, y, duration=0.25)
         time.sleep(0.25)
+
+        personnal_number = os.path.join('pages', 'personnal_number.png')
+        pyautogui.locateCenterOnScreen(personnal_number, confidence=0.95)
+        temp = 0
+        while pyautogui.locateCenterOnScreen(path_verification, confidence=0.95) == None:
+            time.sleep(1)
+            temp += 1
+            if temp == 3:
+                return print("Хюстон, у нас проблемы на экране подтверждения")
+                sys.exit(0)
+        
         
         pyautogui.leftClick(1030, 200, duration=0.25)
         pyautogui.write('000'+ str(num_user))
