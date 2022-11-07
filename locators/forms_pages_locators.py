@@ -21,9 +21,8 @@ class FormsPagesLocators:
         time.sleep(0.25)
 
         personnal_number = os.path.join('pages', 'personnal_number.png')
-        pyautogui.locateCenterOnScreen(personnal_number, confidence=0.95)
         temp = 0
-        while pyautogui.locateCenterOnScreen(path_verification, confidence=0.95) == None:
+        while pyautogui.locateCenterOnScreen(personnal_number, confidence=0.95) == None:
             time.sleep(1)
             temp += 1
             if temp == 3:
@@ -36,7 +35,6 @@ class FormsPagesLocators:
         pyautogui.leftClick(1030, 690, duration=0.25)
         temp = 0
         path_verification = os.path.join('locators', 'verification.png')
-        pyautogui.locateCenterOnScreen(path_verification, confidence=0.95)
         while pyautogui.locateCenterOnScreen(path_verification, confidence=0.95) == None:
             time.sleep(1)
             temp += 1
@@ -46,7 +44,6 @@ class FormsPagesLocators:
         pyautogui.leftClick(1030, 690, duration=0.25)
 
         path_inspection_type =  os.path.join('locators', 'pre-trip_type.png')
-        
         while pyautogui.locateCenterOnScreen(path_inspection_type) == None:
             time.sleep(1)
             temp += 1
