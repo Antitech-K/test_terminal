@@ -38,7 +38,7 @@ class FormsPagesLocators:
             time.sleep(1)
             temp += 1
             if temp == 3:
-                return print("Хюстон, у нас проблемы на экране подтверждения")
+                return print("Хюстон, у нас проблемы на экране подтверждения"), sys.exit()
                 exit()
         pyautogui.leftClick(1030, 690, duration=0.25)
 
@@ -47,7 +47,7 @@ class FormsPagesLocators:
             time.sleep(1)
             temp += 1
             if temp == 3:
-                return print("Хюстон, у нас проблемы на экране типа осмотра")
+                return print("Хюстон, у нас проблемы на экране типа осмотра"), sys.exit()
         x, y =pyautogui.locateCenterOnScreen(path_inspection_type)
         pyautogui.leftClick(x, y, duration=0.25)
         pass
@@ -60,8 +60,8 @@ class FormsPagesLocators:
             time.sleep(0.5)
             temp += 1
             if temp == 6:
-                return print("Хюстон, у нас проблемы на экране preview")
-                exit()
+                return print("Хюстон, у нас проблемы на экране preview"), sys.exit()
+                
         pyautogui.leftClick(1030, 690, duration=0.25)
         pass
 
