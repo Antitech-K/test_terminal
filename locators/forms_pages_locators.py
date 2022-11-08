@@ -28,8 +28,7 @@ class FormsPagesLocators:
             if temp == 3:
                 return print("Хюстон, у нас проблемы на экране подтверждения")
                 sys.exit(0)
-        
-        
+                
         pyautogui.leftClick(1030, 200, duration=0.25)
         pyautogui.write('000'+ str(num_user))
         pyautogui.leftClick(1030, 690, duration=0.25)
@@ -52,6 +51,7 @@ class FormsPagesLocators:
         x, y =pyautogui.locateCenterOnScreen(path_inspection_type)
         pyautogui.leftClick(x, y, duration=0.25)
         pass
+
 
     def PREVIEW_PAGE():
         temp = 0

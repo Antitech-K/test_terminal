@@ -1,4 +1,4 @@
-import os
+import os, sys
 import time
 import pyautogui
 
@@ -12,5 +12,5 @@ class Tonometr:
             temp += 1
             if temp == 6:
                 return print("Хюстон, у нас проблемы на старте тонометра")
-                exit()
+                sys.exit(0)
         pyautogui.leftClick(1040, 690, duration=0.25)
