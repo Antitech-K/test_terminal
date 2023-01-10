@@ -22,7 +22,7 @@ class FormsPagesLocators:
 
         personnal_number = os.path.join('pages', 'personnal_number.png')
         temp = 0
-        while pyautogui.locateCenterOnScreen(personnal_number, confidence=0.95) == None:
+        while pyautogui.locateCenterOnScreen(personnal_number, confidence=0.9) == None:
             time.sleep(1)
             temp += 1
             if temp == 3:
