@@ -8,7 +8,8 @@ from scenarios.scenarioERRORdevice import ERRORdevice
 #from pages.start_page import LoadStartPage
 
 
-def shutdown_rodos():
+# выключение всех реле на стенде
+def shutdown_rodos(): 
     for x in range(16):
         a = "/opt/RODOS4/RODOS4 --id 4798 --c" +str(x) + " 0"
         os.system(a)
