@@ -46,7 +46,7 @@ class FormsPagesLocators:
         while pyautogui.locateCenterOnScreen(path_inspection_type) == None:
             time.sleep(1)
             temp += 1
-            if temp == 3:
+            if temp == 5:
                 return print("Хюстон, у нас проблемы на экране типа осмотра"), sys.exit()
         x, y =pyautogui.locateCenterOnScreen(path_inspection_type)
         pyautogui.leftClick(x, y, duration=0.25)
