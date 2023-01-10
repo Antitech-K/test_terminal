@@ -7,7 +7,7 @@ class Tonometr:
         os.system("/opt/RODOS4/RODOS4 --id 4798 --c10 128")
         temp = 0
         path_tonometr =  os.path.join('scenarios', 'start_tonometr.png')
-        while pyautogui.locateCenterOnScreen(path_tonometr, confidence=0.98) == None:
+        while pyautogui.locateCenterOnScreen(path_tonometr, confidence=0.9) == None:
             time.sleep(0.5)
             temp += 1
             if temp == 6:
