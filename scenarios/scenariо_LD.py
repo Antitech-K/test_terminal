@@ -11,6 +11,6 @@ class Tonometr:
             time.sleep(0.5)
             temp += 1
             if temp == 6:
-                return print("Хюстон, у нас проблемы на старте тонометра"), shutdown_rodos(), sys.exit()
+                return print("Хюстон, у нас проблемы на старте тонометра"), eval("shutdown_rodos()"), sys.exit()
 
         pyautogui.leftClick(1040, 690, duration=0.25)
